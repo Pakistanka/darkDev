@@ -1,0 +1,141 @@
+/* HEADER */
+
+.header {
+    width: 100vw;
+    margin-right: calc(100% - 100vw); 
+}
+
+.header-lang {
+    position: relative;
+    width: 100%;
+    font-size: 16px;
+    z-index: 101;
+    transition: all 0.4s 0.8s; 
+}
+@media screen and (max-width: 767px) {
+    .header-lang {
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0s 0s; 
+    } 
+}
+.header-lang__list {
+    position: absolute;
+    top: 50px;
+    left: 100%;
+    padding-left: 35px;
+    z-index: 1; 
+}
+    @media screen and (max-width: 1023px) {
+        .header-lang__list {
+            top: 48px;
+            left: auto;
+            right: 0; 
+        } 
+    }
+.header-lang a {
+    color: #646464;
+    position: absolute;
+    text-decoration: none;
+    transition: color 0.2s; 
+}
+    @media screen and (max-width: 1023px) {
+        .header-lang a {
+            position: relative; 
+        } 
+    }
+
+
+.header-button {
+    position: relative;
+    z-index: 101;
+    width: 100%;
+    transition: all 0.4s 0.8s; 
+}
+@media screen and (max-width: 1023px) {
+    .page-portfolio .header-button {
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s 0s; 
+    } 
+}
+@media screen and (max-width: 767px) {
+    .header-button {
+        display: none; 
+    } 
+}
+.header-button .button {
+    position: absolute;
+    top: 43px;
+    right: 0; 
+}
+    @media screen and (max-width: 1023px) {
+        .header-button .button {
+            right: 60px; 
+        } 
+    }
+  
+  
+
+
+/* BUTTON */
+
+.button.button--filled {
+    border-color: transparent;
+    color: var(--white);
+    background-color: var(--main-color); 
+}
+html.desktop .button.button--filled:hover {
+    border-color: var(--main-color);
+    color: var(--main-color);
+    background-color: var(--white); 
+}
+.button.button--filled:active, .button.button--filled.active {
+    color: var(--white);
+    border-color: var(--main-color); 
+}
+html.desktop .button:hover {
+    border-color: var(--main-color);
+    color: var(--main-color);
+    background-color: var(--white); 
+}
+.button:active, .button.active {
+    color: var(--black);
+    border-color: var(--main-color); 
+}
+.button.button--s {
+    font-size: 14px;
+    padding: 7px 25px 9px 25px;
+    height: 30px;
+    border-radius: 15px; 
+}
+@media screen and (max-width: 768px) {
+    .button.button--s {
+        padding: 7px 15px 9px 15px; 
+    } 
+}
+
+/* LINKS */
+
+.accent {
+    color: var(--main-color); 
+}
+
+.nav a {
+    text-decoration: none;
+    color: #646464;
+    transition: color 0.2s; 
+}
+html.desktop .nav a:hover {
+    color: var(--main-color); 
+}
+.nav a.active {
+    color: var(--main-color); 
+}
+.nav a.current {
+    pointer-events: none; 
+}
+
+.nav.portfolio-tags a.active {
+    color: inherit; 
+}

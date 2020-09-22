@@ -1,0 +1,56 @@
+:root {
+    --main-color: #C41515;
+    --black: #000000;
+    --brown: #3A001E;
+    --white: #ffffff;
+    --cream: #FFF4EE;
+    --light-brown: #BB8377;
+    --pale-brown: #AD6869;
+  }
+  
+a {
+    color: #646464;
+    text-decoration: none;
+    transition: color 0.2s; 
+}
+html.desktop a:hover {
+    color: var(--main-color); 
+}
+html.desktop .header-lang a:hover {
+    color: var(--main-color); 
+}
+.button {
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.2s;
+    border: 1px solid #B0B0B0;
+    color: #646464;
+    background-color: #fff;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1em;
+    white-space: nowrap;
+    padding: 10px 30px 8px 30px;
+    height: 40px;
+    border-radius: 20px; 
+}
+
+
+html {
+    height: 100%;
+    font-size: 62.5%;
+    font-family: "CeraPRO", "Arial", sans-serif;
+    line-height: 1.25; 
+}
+
+body {
+    line-height: inherit;
+    height: 100%;
+    background-color: #fff;
+    overflow-x: hidden; 
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-text-size-adjust: none; 
+}  

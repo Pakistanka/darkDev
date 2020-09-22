@@ -1,0 +1,373 @@
+
+.accordion-wrap {
+    position: relative;
+    margin-top: 10px; 
+    cursor: pointer;
+}
+
+.accordion-wrap:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto -15px;
+  /* background-color: rgba(223, 223, 223, 0.2); */
+  z-index: -1;
+  opacity: 0;
+  transition: opacity .1s linear; 
+}
+.accordion-wrap:hover {
+  background-color: rgba(189, 213, 229, .3);  
+}
+.accordion-wrap:hover .accordion-wrap:before {
+  background-color: rgba(189, 213, 229, .3); 
+}
+      @media screen and (min-width: 768px) {
+        .accordion-wrap:before {
+          margin-left: -118px;
+          margin-right: -60px; } }
+      @media screen and (min-width: 1024px) {
+        .accordion-wrap:before {
+          margin-left: -38px;
+          margin-right: -76px; } }
+      @media screen and (min-width: 1366px) {
+        .accordion-wrap:before {
+          margin-left: calc(((1120px + 170 * ((100vw - 1366px) / 364)) / 5 + 2px) *-1 - 42px);
+          margin-right: calc(((1120px + 170 * ((100vw - 1366px) / 364)) / 5 + 2px) *-1 - 42px); } }
+    html.desktop .accordion-wrap:hover:before {
+      opacity: 1; }
+    .accordion-wrap._open:before {
+      opacity: 1; }
+    .accordion-wrap._open .accordion-title:after {
+      -webkit-transform: rotate(0);
+              transform: rotate(0); }
+    .accordion-wrap._open .accordion-content {
+      height: auto;
+      padding-bottom: 80px;
+      opacity: 1;
+      overflow: visible;
+      transition: opacity .3s; }
+      @media screen and (max-width: 767px) {
+        .accordion-wrap._open .accordion-content {
+          padding-bottom: 50px; } }
+    @media screen and (min-width: 1366px) {
+      .accordion-wrap._open .accordion-info-group--aside,
+      .accordion-wrap._open .accordion-info-aside {
+        display: block; } }
+  
+  .accordion-head {
+    padding-top: 22px;
+    padding-bottom: 22px;
+    cursor: pointer; }
+    @media screen and (min-width: 768px) {
+      .accordion-head {
+        padding-top: 37px;
+        padding-bottom: 37px; } }
+  
+  .accordion-title {
+    display: inline-block;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: 0.01em;
+    padding-left: 30px; }
+    .accordion-title:after {
+      content: '';
+      position: absolute;
+      top: 30px;
+      left: 0;
+      width: 12px;
+      height: 7px;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: 100% 100%;
+      background-image: url(../img/pages/about/arrow_up_black.svg);
+      transition: -webkit-transform .25s;
+      transition: transform .25s;
+      transition: transform .25s, -webkit-transform .25s;
+      -webkit-transform: rotate(-180deg);
+              transform: rotate(-180deg); }
+    @media screen and (min-width: 768px) {
+      .accordion-title {
+        font-size: 20px;
+        line-height: 25px;
+        padding-left: 0; }
+        .accordion-title:after {
+          top: 47px;
+          left: -24px; } }
+    @media screen and (min-width: 1366px) {
+      .accordion-title:after {
+        content: none; } }
+  
+  .accordion-tags {
+    font-size: 14px;
+    line-height: 19px;
+    color: #B0B0B0;
+    margin-top: 12px; }
+  
+  .accordion-content {
+    height: 0;
+    opacity: 0;
+    padding: 0;
+    overflow: hidden; }
+    .accordion-content > *:first-child {
+      margin-top: 15px !important; }
+      @media screen and (min-width: 768px) {
+        .accordion-content > *:first-child {
+          margin-top: 20px !important; } }
+    .accordion-content > *:last-child {
+      margin-bottom: 0 !important; }
+    .accordion-content p a {
+      color: #646464; }
+    .accordion-content .button {
+      margin-top: 17px; }
+      @media screen and (min-width: 768px) {
+        .accordion-content .button {
+          margin-top: 22px; } }
+  
+  .accordion-inline-img {
+    max-width: 560px;
+    width: 100%;
+    margin-top: 50px; }
+  
+  .accordion-float-img {
+    margin-top: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 340px; }
+    .accordion-float-img.img--brains {
+      width: 37.58%; }
+    .accordion-float-img.img--cactus {
+      width: 44.13%;
+      margin-top: 40px; }
+    .accordion-float-img.img--pc {
+      width: 76.2%;
+      max-height: 280px;
+      margin-top: 45px;
+      margin-bottom: 40px; }
+    .accordion-float-img.img--dumbbell {
+      width: 67.58%;
+      max-height: 250px;
+      margin-top: 45px;
+      margin-bottom: 40px; }
+    .accordion-float-img.img--cat {
+      width: 100%;
+      max-height: 250px;
+      margin-top: 50px; }
+    .accordion-float-img.img--wheel {
+      width: 68.27%;
+      margin-top: 24px; }
+    @media screen and (min-width: 768px) {
+      .accordion-float-img {
+        max-height: inherit;
+        float: right;
+        margin-left: 50px; }
+        .accordion-float-img.img--brains {
+          width: 144px;
+          margin-left: 85px;
+          margin-top: -15px;
+          margin-bottom: 40px; }
+        .accordion-float-img.img--cactus {
+          width: 128px;
+          margin-right: -12px;
+          margin-left: 82px;
+          margin-top: 0;
+          margin-bottom: 0; }
+        .accordion-float-img.img--pc {
+          width: 150px;
+          margin-right: -12px;
+          margin-left: 30px;
+          margin-top: 0;
+          margin-bottom: 0; }
+        .accordion-float-img.img--dumbbell {
+          width: 142px;
+          margin-right: -12px;
+          margin-left: 70px;
+          margin-top: 40px;
+          margin-bottom: 40px; }
+        .accordion-float-img.img--cat {
+          width: 157px;
+          margin-right: -20px;
+          margin-left: 63px; }
+        .accordion-float-img.img--wheel {
+          width: 157px;
+          margin-left: 63px; } }
+    @media screen and (min-width: 1024px) {
+      .accordion-float-img.img--brains {
+        margin-left: 117px;
+        margin-top: 55px;
+        margin-bottom: 60px; }
+      .accordion-float-img.img--cactus {
+        width: 140px;
+        margin-right: -25px;
+        margin-left: 145px;
+        margin-top: -30px; }
+      .accordion-float-img.img--pc {
+        width: 213px;
+        margin-right: -25px;
+        margin-top: 40px;
+        margin-bottom: 50px;
+        margin-left: 65px; }
+      .accordion-float-img.img--dumbbell {
+        width: 191px;
+        margin-right: -25px;
+        margin-left: 75px;
+        margin-top: 5px; }
+      .accordion-float-img.img--cat {
+        width: 235px;
+        margin-right: -35px;
+        margin-top: 0; }
+      .accordion-float-img.img--wheel {
+        width: 196px;
+        margin-right: -25px; } }
+    @media screen and (min-width: 1366px) {
+      .accordion-float-img.img--brains {
+        width: 168px;
+        margin-left: 117px;
+        margin-right: -55px; }
+      .accordion-float-img.img--cactus {
+        width: 148px;
+        margin-right: -70px; }
+      .accordion-float-img.img--pc {
+        width: 256px;
+        margin-right: -125px; }
+      .accordion-float-img.img--dumbbell {
+        width: 220px;
+        margin-right: -110px; }
+      .accordion-float-img.img--cat {
+        width: 235px;
+        margin-right: -115px; }
+      .accordion-float-img.img--wheel {
+        margin-right: -100px; } }
+    @media screen and (min-width: 1920px) {
+      .accordion-float-img.img--brains {
+        width: 191px;
+        margin-right: -95px;
+        margin-left: 210px;
+        margin-top: 0; }
+      .accordion-float-img.img--cactus {
+        width: 169px;
+        margin-right: -85px;
+        margin-left: 215px;
+        margin-top: -115px; }
+      .accordion-float-img.img--pc {
+        width: 292px;
+        margin-right: -146px;
+        margin-top: 0;
+        margin-left: 150px; }
+      .accordion-float-img.img--dumbbell {
+        width: 243px;
+        margin-right: -121px;
+        margin-left: 180px;
+        margin-bottom: 0; }
+      .accordion-float-img.img--cat {
+        margin-left: 230px; }
+      .accordion-float-img.img--wheel {
+        margin-top: 0;
+        margin-left: 205px;
+        margin-bottom: 100px; } }
+  
+  .accordion-info-group {
+    margin-top: 50px; }
+    .accordion-info-group.mt-40 {
+      margin-top: 40px; }
+    .accordion-info-group .about-heading {
+      margin-top: 0;
+      margin-bottom: 7px; }
+    .accordion-info-group .about-heading + p,
+    .accordion-info-group .accordion-info-group__title + p {
+      margin-top: 7px; }
+      @media screen and (min-width: 768px) {
+        .accordion-info-group .about-heading + p,
+        .accordion-info-group .accordion-info-group__title + p {
+          margin-top: 12px; } }
+    .accordion-info-group p {
+      margin-bottom: 0; }
+      .accordion-info-group p.mt-12 {
+        margin-top: 12px; }
+    .accordion-info-group .accordion-tags {
+      margin-top: 7px; }
+      @media screen and (min-width: 768px) {
+        .accordion-info-group .accordion-tags {
+          margin-top: 12px; } }
+    @media screen and (min-width: 768px) {
+      .accordion-info-group {
+        margin-top: 80px; } }
+  
+  .accordion-info-group__title {
+    font-size: 17px;
+    line-height: 22px;
+    font-weight: bold; }
+    @media screen and (min-width: 768px) {
+      .accordion-info-group__title {
+        font-size: 20px;
+        line-height: 25px; } }
+  
+  .accordion-info-group__title--big {
+    font-size: 18px;
+    line-height: 23px; }
+    @media screen and (min-width: 768px) {
+      .accordion-info-group__title--big {
+        font-size: 20px;
+        line-height: 25px; } }
+    @media screen and (min-width: 1366px) {
+      .accordion-info-group__title--big {
+        margin-top: 80px; } }
+  
+  .text-small {
+    font-size: 14px;
+    line-height: 19px; }
+  
+  .accordion-info-aside {
+    margin-top: 40px;
+    max-width: 590px; }
+    @media screen and (min-width: 768px) {
+      .accordion-info-aside {
+        margin-top: 25px; } }
+    @media screen and (min-width: 1366px) {
+      .accordion-info-aside {
+        display: none; } }
+    .accordion-info-aside:before {
+      content: '—';
+      position: relative;
+      display: block;
+      font-size: 24px;
+      line-height: 30px;
+      font-weight: bold; }
+    .accordion-info-aside > *:first-child {
+      margin-top: 8px !important; }
+    .accordion-info-aside > *:last-child {
+      margin-bottom: 0 !important; }
+  
+  .accordion-info-aside + .accordion-info-group {
+    margin-top: 40px; }
+    @media screen and (min-width: 768px) {
+      .accordion-info-aside + .accordion-info-group {
+        margin-top: 60px; } }
+  
+  @media screen and (min-width: 1366px) {
+    .accordion-info-aside--top,
+    .accordion-info-aside--bottom {
+      position: absolute;
+      left: calc(((1120px + 170 * ((100vw - 1366px) / 364)) / 5 + 2px) *-1);
+      width: calc(((1120px + 170 * ((100vw - 1366px) / 364)) / 5 + 2px) - 10px);
+      margin-top: 0 !important;
+      padding-right: 40px; } }
+  
+  @media screen and (min-width: 1730px) {
+    .accordion-info-aside--top,
+    .accordion-info-aside--bottom {
+      padding-right: 30px; } }
+  
+  @media screen and (min-width: 1366px) {
+    .accordion-info-aside--top {
+      top: 141px; } }
+  
+  @media screen and (min-width: 1366px) {
+    .accordion-info-aside--bottom {
+      margin-top: 71px !important; } }
+  
+  
