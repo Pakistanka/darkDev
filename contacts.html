@@ -8,6 +8,7 @@
     <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLEs">
     <meta content="telephone=no" name="format-detection">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <title>Контакты</title>
 
 
@@ -21,6 +22,7 @@
     <link rel="stylesheet" href="./css/swiper.css">
     <link rel="stylesheet" href="./css/animations.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/modal.css">
 
 
     <meta name="description"
@@ -98,7 +100,7 @@
 
             <div class="container">
                 <div class="header-button">
-                    <a class="button button--filled js-new-project-btn" href="">Заказать проект</a>
+                    <button class="button button--filled popup">Заказать проект</button>
                 </div>
                 <div class="header-lang">
 
@@ -153,7 +155,7 @@
 
 
         <!-- КОНТЕНТ -->
-        <main class="layout-container" id="page-controller" aria-live="polite">
+        <main class="layout-container" id="page-contacts" aria-live="polite">
 
             <section class="page contacts js-page" data-page="contacts" style="visibility: visible;">
                 <div class="contacts-bg"></div>
@@ -180,33 +182,26 @@
                         
                     </div>
                 </div>
-
-                <div class="policy-popup js-policy-popup">
-                    <div class="policy-popup__inner js-policy-popup-inner">
-                        <div class="policy-popup__text">
-                            <p>
-                                <a target="_blank" href="">Политика организации</a> в отношении обработки персональных данных на сайте.</p>
-                            <p>
-                                <a target="_blank" href="">Уведомление об использовании файлов cookie.</a>
-                            </p>
-                            <p>Направляя свое резюме и иные персональные данные по указанным на сайте эл. адресам и
-                                телефонам, я даю свое согласие на обработку персональных данных.</p>
-                            <p>
-                                <a target="_blank" href="">Согласие на обработку персональных данных для клиентов.</a>
-                            </p>
-                            <p>
-                                <a target="_blank" href="">Согласие на обработку персональных данных для соискателей.</a>
-                            </p>
-                        </div>
-                        <button class="policy-popup__close js-close-policy-popup"></button>
-                    </div>
-                </div>
             </section>
         </main>
-
-        <footer class="footer"></footer>
+        <div class="back">
+            <div class="front">
+            <div class="contacts-modal">
+                <span title="Закрыть" class="close-modal">&times;</span>
+                <h1>Заполните форму, и мы свяжемся с Вами</h1>
+                <label for="">
+                    <input type="tel" placeholder="+7(000)000-00-00" class="modal__input">
+                </label>
+                <label for="">
+                    <input type="email" placeholder="example@example.com" class="modal__input">
+                </label>
+                <button class="contacts__button">Отправить</button>
+            </div>
+            </div>
+        </div>
 
     </div>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

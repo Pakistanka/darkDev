@@ -8,6 +8,8 @@
     <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLEs">
     <meta content="telephone=no" name="format-detection">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <title>Главная</title>
 
 
@@ -21,6 +23,7 @@
     <link rel="stylesheet" href="./css/swiper.css">
     <link rel="stylesheet" href="./css/animations.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/modal.css">
 
 
     <meta name="description"
@@ -78,9 +81,9 @@
 
             <div class="container">
                 <div class="header-button">
-                    <a class="button button--filled js-new-project-btn"
-                        href="">Заказать проект</a>
+                    <button class="button button--filled popup">Заказать проект</button>
                 </div>
+
             </div>
 
 
@@ -105,7 +108,7 @@
 
                         <li class="_spacer nav-menu__social js-menu-socials">
 
-                            <!-- <a class="" href="" target="_blank">
+                            <a class="" href="" target="_blank">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon">
                                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-fb"></use>
                                 </svg> 
@@ -114,7 +117,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon">
                                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-in"></use>
                                 </svg> 
-                            </a> -->
+                            </a>
                         </li>
                     </ul>
 
@@ -145,55 +148,53 @@
                         и&nbsp;интерфейсов, ребрендингом и переносом ваших сайтов на CMS!</div>
                 </div>
             </section>
-            <!-- <div class="disclaimer js-disclaimer" style="display: none;">
-                <div class="disclaimer__inner js-disclaimer-inner">
-                    <div class="disclaimer__text-1">
-                        <p>Продолжая использовать наш сайт, вы&nbsp;даете согласие на&nbsp;<a
-                                href="">обработку файлов cookie</a>
-                            и&nbsp;пользовательских данных.</p>
-                        <p>Если вы&nbsp;не&nbsp;хотите, чтобы ваши данные обрабатывались, покиньте сайт.</p>
-                        <p><b class="disclaimer__text-title js-disclaimer-toggler">Перечень собираемых данных</b></p>
-                        <button
-                            class="button button--s disclaimer__agree-btn-mobile js-disclaimer-agree">Согласен</button>
-                    </div>
-                    <div class="disclaimer__text-2">
-                        <button class="disclaimer__back-btn js-disclaimer-toggler">Вернуться</button>
-                        <p>Cведения о&nbsp;местоположении; тип и&nbsp;версия&nbsp;ОС; тип и&nbsp;версия браузера; тип
-                            устройства и&nbsp;разрешение его экрана; источники входа на&nbsp;сайт; язык&nbsp;ОС
-                            и&nbsp;браузера; посещенные страницы сайта и&nbsp;действия на&nbsp;них; ip-адрес
-                            в&nbsp;целях функционирования сайта, проведения ретаргетинга, проведения статистических
-                            исследований и&nbsp;передачи третьим лицам.</p>
+            
+            <footer class="footer">
+                <div class="container about-footer">
+                    <div class="about-footer__cols-wrap">
+
+                        <div class="about-footer__contacts-col">
+                            <div class="about-footer__text about-footer__coop-text">
+                                <div class="text-small">Данные о фирме:</div>
+                                <div>ИНН: 0000000000</div>
+                                <div>КПП: 0000000000</div>
+                                <div>ОГРН: 0000000000</div>
+                            </div>
+                        </div>
+
+                        <div class="about-footer__spec-col">
+                            <div class="about-footer__text">
+                                Контактные данные:
+
+                                <a href="example@example.com">example@example.com</a><br>
+                                <a href="tel:+74959177258">+7 495 917-7258</a><br>
+                                <a href="tel:+74959177146">+7 495 917-7146</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="disclaimer__marquee">
-                <div class="disclaimer__marquee-inner" data-text="Big Brother is watching you — Big Brother is watching you — Big Brother is watching you — Big Brother is watching you">
-                    <div>Big Brother is watching you — Big Brother is watching you — Big Brother is watching you — Big Brother is watching you</div>
-                </div>
-            </div>
-                <button class="button button--s disclaimer__agree-btn js-disclaimer-agree">Согласен</button>
-            </div>  -->
+            </footer>
         </main>
 
-        <footer class="footer"></footer>
+        <div class="back">
+            <div class="front">
+            <div class="contacts-modal">
+                <span title="Закрыть" class="close-modal">&times;</span>
+                <h1>Заполните форму, и мы свяжемся с Вами</h1>
+                <label for="">
+                    <input type="tel" placeholder="+7(000)000-00-00" class="modal__input">
+                </label>
+                <label for="">
+                    <input type="email" placeholder="example@example.com" class="modal__input">
+                </label>
+                <button class="contacts__button">Отправить</button>
+            </div>
+            </div>
+        </div>
+
 
     </div>
-
-
-    <script>
-        window.validateMessages = {
-            required: "Обязательное поле",
-            minlength: "Минимум %min% символов",
-            email: "Неправильный формат",
-            fileformat: "Недопустимый тип файла",
-            filesize: "Размер файла должен быть до %max% МБ"
-        };
-    </script>
-    <script src="./index_files/libs.min.js"></script>
-    <script src="./index_files/script.min.js"></script>
-
-    <!-- <script type="text/javascript" src="./index_files/wp-embed.min.js"></script> -->
-
-    
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
